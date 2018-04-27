@@ -1,0 +1,35 @@
+<div class="login-container" nz-row [nzType]="'flex'" [nzJustify]="'space-around'" [nzAlign]="'middle'">
+  <div nz-col [nzSpan]="4">
+    <form nz-form class="login-form">
+      <div nz-form-item>
+        <div nz-form-control>
+          <nz-input formControlName="userName" [nzPlaceHolder]="'用户名'" required [nzSize]="'large'">
+            <ng-template #prefix>
+              <i class="anticon anticon-user"></i>
+            </ng-template>
+          </nz-input>
+          <div nz-form-explain *ngIf="userName.invalid && (userName.dirty || userName.touched)">请输入用户名</div>
+        </div>
+      </div>
+      <div nz-form-item>
+        <div nz-form-control>
+          <nz-input formControlName="password" [nzType]="'password'" required [nzPlaceHolder]="'密码'" [nzSize]="'large'">
+            <ng-template #prefix>
+              <i class="anticon anticon-lock"></i>
+            </ng-template>
+          </nz-input>
+          <div nz-form-explain *ngIf="password.invalid && (password.dirty || password.touched)">请输入密码</div>
+        </div>
+      </div>
+      <div nz-form-item>
+        <div nz-form-control>
+          <button nz-button class="login-form-button" [nzType]="'primary'" [nzSize]="'large'">登录</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
